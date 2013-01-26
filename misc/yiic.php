@@ -1,7 +1,11 @@
 <?php
+// set environment
+require_once(dirname(__FILE__) . '/extensions/yii-environment/Environment.php');
+$env = new Environment(isset($_ENV['OPENSHIFT_APP_UUID']) ? 'PRODUCTION' : NULL);
 
-// change the following paths if necessary
-$yiic=dirname(__FILE__).'/../../../framework/yiic.php';
-$config=dirname(__FILE__).'/config/console.php';
+// set debug and trace level
+defined('YII_DEBUG') or define('YII_DEBUG', $env->yiiDebug);
+defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', $env->yiiTraceLevel);
 
-require_once($yiic);
+// run Yii app
+require_once($env->yiicPath);
