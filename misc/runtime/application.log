@@ -1,6 +1,0 @@
-2013/01/26 22:16:53 [trace] [system.CModule] Loading "log" application component
-in /home/lixu/Projs/OpenShift/yiiskeleton/php/index.php (14)
-2013/01/26 22:16:53 [trace] [system.CModule] Loading "request" application component
-in /home/lixu/Projs/OpenShift/yiiskeleton/php/index.php (14)
-2013/01/26 22:16:53 [trace] [system.CModule] Loading "urlManager" application component
-in /home/lixu/Projs/OpenShift/yiiskeleton/php/index.php (14)
