@@ -1,6 +1,6 @@
-* Yii boilerplate on Openshift
+# Yii boilerplate on Openshift
 
-** How to use
+## How to use
 1. Create the project
 
    `rhc app create YOURAPPNAME php-5.3`
@@ -19,7 +19,7 @@
 
 5. Check & change the configs in misc/configs
 
-** Changes made
+## Changes made
 1. Add [yii-environment](http://code.google.com/p/yii-environment/) extension
 2. Change the "protected" folder to "misc"
 3. Use $_ENV['OPENSHIFT_APP_UUID'] to determine the Yii environment.
