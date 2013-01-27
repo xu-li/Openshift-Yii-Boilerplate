@@ -38,7 +38,7 @@ return array(
 
 			// Database
 			'db' => array(
-				'connectionString' => sprintf('mysql:host=%s:%d;dbname=%s', $_ENV['OPENSHIFT_MYSQL_DB_HOST'], $_ENV['OPENSHIFT_MYSQL_DB_PORT'], $_ENV['OPENSHIFT_APP_NAME']),
+				'connectionString' => sprintf('mysql:host=%s;port=%d;dbname=%s', $_ENV['OPENSHIFT_MYSQL_DB_HOST'], $_ENV['OPENSHIFT_MYSQL_DB_PORT'], $_ENV['OPENSHIFT_APP_NAME']),
 				'username' => $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'],
 				'password' => $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']
 				//'schemaCachingDuration' => 3600,
