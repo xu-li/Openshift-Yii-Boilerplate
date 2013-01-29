@@ -23,7 +23,7 @@
 1. Add [yii-environment](http://code.google.com/p/yii-environment/) extension
 2. Move the framework into "libs"
 3. Change the "protected" folder to "misc"
-4. Use $_ENV['OPENSHIFT_APP_UUID'] to determine the Yii environment.
-5. Use $_ENV['OPENSHIFT_MYSQL_DB_*'] to determine the production database
-6. set the runtimePath to $_ENV['OPENSHIFT_PHP_LOG_DIR'] on production
+4. Use getenv('OPENSHIFT_APP_UUID') to determine the Yii environment.
+5. Use getenv('OPENSHIFT_MYSQL_DB_*') to determine the production database
+6. set the runtimePath to getenv('OPENSHIFT_PHP_LOG_DIR') on production
 7. Add hourly test command

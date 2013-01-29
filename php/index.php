@@ -1,7 +1,7 @@
 <?php
 // set environment
 require_once(dirname(__FILE__) . '/../misc/extensions/yii-environment/Environment.php');
-$env = new Environment(isset($_ENV['OPENSHIFT_APP_UUID']) ? 'PRODUCTION' : NULL);
+$env = new Environment(empty(getenv('OPENSHIFT_APP_UUID')) ? NULL : 'PRODUCTION');
 
 // set debug and trace level
 defined('YII_DEBUG') or define('YII_DEBUG', $env->yiiDebug);

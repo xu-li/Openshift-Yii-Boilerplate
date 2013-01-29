@@ -29,7 +29,7 @@ return array(
 	// Supplied config elements will be merged into the main config array.
 	'configWeb' => array(
 
-    'runtimePath' => $_ENV['OPENSHIFT_PHP_LOG_DIR'],
+    'runtimePath' => getenv('OPENSHIFT_PHP_LOG_DIR'),
 
 		// Application components
 		'components' => array(
@@ -40,9 +40,9 @@ return array(
 
 			// Database
 			'db' => array(
-				'connectionString' => sprintf('mysql:host=%s;port=%d;dbname=%s', $_ENV['OPENSHIFT_MYSQL_DB_HOST'], $_ENV['OPENSHIFT_MYSQL_DB_PORT'], $_ENV['OPENSHIFT_APP_NAME']),
-				'username' => $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'],
-				'password' => $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']
+				'connectionString' => sprintf('mysql:host=%s;port=%d;dbname=%s', getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_PORT'), getenv('OPENSHIFT_APP_NAME')),
+				'username' => getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
+				'password' => getenv('OPENSHIFT_MYSQL_DB_PASSWORD')
 				//'schemaCachingDuration' => 3600,
 			),
 
@@ -76,7 +76,7 @@ return array(
     // Use value 'inherit' to copy from generated configWeb.
 	'configConsole' => array(
 
-    'runtimePath' => $_ENV['OPENSHIFT_PHP_LOG_DIR'],
+    'runtimePath' => getenv('OPENSHIFT_PHP_LOG_DIR'),
 
 		// Application components
 		'components' => array(
