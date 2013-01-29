@@ -25,4 +25,5 @@
 3. Change the "protected" folder to "misc"
 4. Use $_ENV['OPENSHIFT_APP_UUID'] to determine the Yii environment.
 5. Use $_ENV['OPENSHIFT_MYSQL_DB_*'] to determine the production database
-6. Use $_ENV['OPENSHIFT_PHP_LOG_DIR'] to save the log file
+6. set the runtimePath to $_ENV['OPENSHIFT_PHP_LOG_DIR'] on production
+7. Add hourly test command

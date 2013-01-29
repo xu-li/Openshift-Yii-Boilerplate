@@ -8,4 +8,5 @@ defined('YII_DEBUG') or define('YII_DEBUG', $env->yiiDebug);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', $env->yiiTraceLevel);
 
 // run Yii app
+$config = $env->configConsole;
 require_once($env->yiicPath);

@@ -29,6 +29,8 @@ return array(
 	// Supplied config elements will be merged into the main config array.
 	'configWeb' => array(
 
+    'runtimePath' => $_ENV['OPENSHIFT_PHP_LOG_DIR'],
+
 		// Application components
 		'components' => array(
 
@@ -51,15 +53,16 @@ return array(
 					// Save log messages on file
 					array(
 						'class' => 'CFileLogRoute',
-						'levels' => 'error, warning, trace, info',
-            'logPath' => $_ENV['OPENSHIFT_PHP_LOG_DIR'],
+						'levels' => 'error, warning, info'
 					),
 					// Send errors via email to the system admin
+          /*
 					array(
 						'class' => 'CEmailLogRoute',
 						'levels' => 'error, warning',
 						'emails' => 'webadmin@example.com',
 					),
+          */
 				),
 			),
 
@@ -72,6 +75,8 @@ return array(
     // Leave array empty if not used.
     // Use value 'inherit' to copy from generated configWeb.
 	'configConsole' => array(
+
+    'runtimePath' => $_ENV['OPENSHIFT_PHP_LOG_DIR'],
 
 		// Application components
 		'components' => array(
